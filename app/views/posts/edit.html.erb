@@ -1,0 +1,13 @@
+<% @page_title = "Edit Post" %>
+
+<h1 class="main-title">EDIT POST</h1>
+
+<%= form_for @post, :as => :post, :url => { :controller => "posts", :action => "update" } do |f| %>
+<b>Title</b>
+<p><%= f.text_field :title, :size => "78" %></p>
+<b>Body</b>
+<p><%= f.text_area :body, :size => "60x30" %></p>
+<b>Status</b>
+<p><%= f.select(:status, ["Active", "Inactive"]) %></p>
+<%= f.submit "Save" %>
+<% end %>

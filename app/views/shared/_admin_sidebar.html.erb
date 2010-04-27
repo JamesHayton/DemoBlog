@@ -1,0 +1,25 @@
+<div id="sidebar">
+
+<div id="logo">
+<%= link_to "BLOG NAME HERE", root_path %>
+<p>Welcome!  This is the administration sidebar.  It's just a very crude and temporary administration section for the blog.  Eventually, I will add more stuff here to help with administration.</p>
+</div>
+
+<div id="navigation">
+<h3 class="title">Navigation</h3>
+<ul>
+<li><%= link_to_with_active_class "Home", root_path %></li>
+<li><%= link_to_with_active_class "New Post", new_post_path %></li>
+<li><%= link_to_with_active_class "New Category", new_category_path %></li>
+</ul>
+</div>
+
+<div id="login">
+<% if user_signed_in? %>
+<%= current_user.username %> | <%= link_to "Logout", destroy_user_session_path, {:rel => "nofollow" } %>
+<% else %>
+<%= link_to "Register", new_user_registration_path, {:rel => "nofollow" } %> | <%= link_to "Login", new_user_session_path, {:rel => "nofollow" } %>
+<% end %>
+</div>
+
+</div><!-- /sidebar -->

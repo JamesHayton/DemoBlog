@@ -1,0 +1,14 @@
+<div id="comment-form">
+<h2 class="comment-form-title">YOUR THOUGHTS PLEASE</h2>
+<%= form_for @comment, :as => :comment, :url => { :controller => "comments", :action => "create" } do |f| %> 
+
+<p><%= f.text_field :name %> Name</p>
+<p><%= f.text_field :email %> Email</p>
+<p><%= f.text_field :website %> Website</p>
+<p><%= f.text_area :body, :size => "40x8" %></p>
+
+
+<p><%= f.text_field :temp_post_id %> Temp Parent ID</p>
+<%= f.submit "Submit" %>
+<% end %>
+</div>

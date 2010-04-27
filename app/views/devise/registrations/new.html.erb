@@ -1,0 +1,17 @@
+<% @page_title = "Register" %>
+
+<h1 class="main-title">REGISTER</h1>
+
+<%= form_for resource_name, resource, :url => registration_path(resource_name), do |f| %>
+<b>Email</b> 
+<p><%= f.text_field :email %></p>
+<b>Choose A Username</b>
+<p><%= f.text_field :username %></p>
+<b>Password</b>
+<p><%= f.password_field :password %></p>
+<b>Confirm Password</b>
+<p><%= f.password_field :password_confirmation %></p>
+<b>Time Zone</b>
+<p><%= f.time_zone_select(:time_zone) %></p>
+<p><%= f.submit "Register" %></p>
+<% end %>

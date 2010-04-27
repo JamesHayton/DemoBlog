@@ -1,0 +1,5 @@
+<%= form_for :category, @category, :url => categories_path(@category) do |f| %>
+<b>Name</b>
+<p><%= f.text_field :name %></p>
+<%= f.submit "Save" %>
+<% end %>

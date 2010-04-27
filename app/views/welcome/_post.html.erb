@@ -1,0 +1,7 @@
+<% @category = post.post_category(post) %>
+
+<div class="post">
+<h2><%= link_to(truncate(post.title, :length => 50), post_path({:id => post.slug})) %></h2>
+<p><span class="category-link"><%= link_to post.category, category_path({:id => @category.slug}) %></span> <span class="category-time"><%= post.created_at.strftime("%B #{post.created_at.day.ordinalize}, %Y") %></span></p>
+<%= truncate(post.body, :length => 300 ) %>
+</div>

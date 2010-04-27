@@ -1,0 +1,13 @@
+<% categories = @categories.map { |category| [category.name] } %>
+
+<%= form_for :post, @post, :url => post_post_path(@post) do |f| %>
+<b>Title</b>
+<p><%= f.text_field :title, :size => "78" %></p>
+<b>Body</b>
+<p><%= f.text_area :body, :size => "60x30" %></p>
+<b>Category</b>
+<p><%= f.select(:category, categories) %></p>
+<b>Status</b>
+<p><%= f.select(:status, ["Active", "Inactive"]) %></p>
+<%= f.submit "Save" %>
+<% end %>

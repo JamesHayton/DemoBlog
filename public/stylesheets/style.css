@@ -1,0 +1,139 @@
+/* =Basic HTML
+--------------------------------------------------------------------------------*/
+
+body
+{
+	font: 13px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+a:focus
+{
+	outline: 1px dotted invert;
+}
+
+hr
+{
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px 0 0;
+	clear: both;
+	height: 0;
+}
+
+/* =Headings
+--------------------------------------------------------------------------------*/
+
+h1
+{
+	font-size: 25px;
+}
+
+h2
+{
+	font-size: 23px;
+}
+
+h3
+{
+	font-size: 21px;
+}
+
+h4
+{
+	font-size: 19px;
+}
+
+h5
+{
+	font-size: 17px;
+}
+
+h6
+{
+	font-size: 15px;
+}
+
+/* =Spacing
+--------------------------------------------------------------------------------*/
+
+ol
+{
+	list-style: decimal;
+}
+
+ul
+{
+	list-style: square;
+}
+
+li
+{
+	margin-left: 30px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset
+{
+	margin-bottom: 20px;
+}
+body { background: #fff; }
+#wrapper { width: 980px; margin: 0; background: #222; padding: 0; }
+#sidebar { background: #222; margin: 0; padding: 50px 30px 0 20px; width: 300px; float: left; color: #aaa; }
+#sidebar .title { color: #aaa; border-bottom: 1px solid #444;  }
+#logo a { font-size: 25px; color: #fff; text-decoration: none; font-weight: bold; display: block; margin: 0 0 20px 0; }
+#logo p { color: #aaa; font-weight: bold; }
+#navigation ul li, #twitter ul li, #categories ul li { list-style: none; margin: 0; }
+#navigation ul li a, #twitter ul li a, #categories ul li a { display: block; color: #aaa; text-decoration: none; padding: 1px 7px; font-size: 14px; }
+#navigation ul li a:hover, #twitter ul li a:hover, #categories ul li a:hover { background: #555; }
+#twitter ul li { margin: 0 0 10px 0; }
+
+#content { padding: 50px 20px 80px 30px; margin: 0 0 0 350px; width: 610px; background: #fff; min-height: 900px;}
+
+.main { margin: 0 0 0 280px; min-height: 700px;  }
+
+.flash { background: #777; padding: 10px 20px; margin: 0 0 20px 0; color: #fff; font-weight: bold; }
+
+.active { font-weight: bold; }
+.main-title { color: #aaa; font-weight: bold;  text-transform: uppercase;}
+
+#temp-post-id-block { background: #eee; padding: 20px 20px 5px 20px; }
+#comments, #comment-form, .comment, #comment-links { margin: 55px 0 0 0; }
+/*#comment-form { padding: 20px; background: #aaa; }*/
+#comment-form p { margin: 0 0 10px 0; }
+#comment-form input { width: 250px; }
+#comment-form input#comment_submit { width: 150px; }
+#comment-form textarea { width: 350px; }
+
+.comment { border-top: 1px solid #777; position: relative; margin: 0 0 25px 0; }
+.comment-body { padding: 10px 0 0 0;  width: 390px; min-height: 50px;  }
+.comment-meta { width: 160px; background: #777; color: #fff; position: absolute; top: 0; right: 0; padding: 10px 20px; font-weight: bold; }
+.comment-meta ul { margin: 0; }
+.comment-meta ul li { list-style: none; margin: 0; }
+.comment-meta ul li a { color: #fff; text-decoration: none;  }
+.comment-meta ul li a:hover { text-decoration: underline; }
+
+.post { margin: 0 0 20px 0; }
+.post h2, #post h1 { margin: 0 0 5px 0; }
+.post h2 a { text-decoration: none; color: #333; }
+.post h2 a:hover { text-decoration: underline; }
+.category-link a { background: #777; color: #fff; padding: 1px 7px; text-decoration: none; margin: 0 3px 0 0; font-weight: bold;  }
+.category-link a:hover { background: #444; }
+.category-time { font-weight: bold; color: #777; }
+.post_content { padding: 0 15px 0 0; }
+#copyright { margin: 40px 0 0 0; color: #aaa; }
+
+#login { padding: 0 0 30px 0; }
+#login a { color: #aaa; }

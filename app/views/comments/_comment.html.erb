@@ -1,0 +1,16 @@
+<div class="comment">
+<div class="comment-body"><%= comment.body %>
+<p><% if can? :update, comment %>
+<%= link_to 'Edit', comment_path({:id => comment.id}) %>
+<% end %>
+<% if can? :destroy, comment %>
+<%= link_to 'Delete', comment_path({:id => comment.id}), :confirm => "Are you sure?", :method => :delete %>
+<% end %></p>
+</div>
+<div class="comment-meta">
+<ul>
+<li><%= comment.created_at.strftime("%B #{@post.created_at.day.ordinalize}, %Y") %></li>
+<li><% if comment.website != "" %><a href="<%= comment.website %>" rel="nofollow"><%= comment.name %></a><% else %><%= comment.name %><% end %></li>
+</ul>
+</div>
+</div>

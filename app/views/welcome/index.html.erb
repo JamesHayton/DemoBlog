@@ -1,0 +1,7 @@
+<% @page_title = "Title Goes Here" %>
+
+<h1 class="main-title">LATEST BLOG POSTS</h1>
+
+<% @posts.each do |post|%>
+  <%= render :partial => 'post', :locals => {:post => post}%>
+<% end %>

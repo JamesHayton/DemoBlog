@@ -1,0 +1,13 @@
+<% @page_title = "Login" %>
+
+<h1 class="main-title">LOGIN</h1>
+
+<%= form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+  <b>Email</b>
+  <p><%= f.text_field :email %></p>
+
+  <b>Password</b>
+  <p><%= f.password_field :password %></p>
+
+  <p><%= f.submit "Login" %></p>
+<% end -%>

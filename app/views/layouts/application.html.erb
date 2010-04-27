@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta charset="utf-8" />
+<meta content="index, follow" name="robots" />
+ <%= csrf_meta_tag %>
+<title><%= @page_title %> | Blog Name Here</title>
+<%= stylesheet_link_tag :all %>
+</head>
+<body>
+<div id="wrapper">
+<% if user_signed_in? %>
+<%= render :partial => "shared/admin_sidebar" %>
+<% else %>
+<%= render :partial => "shared/sidebar" %>
+<% end %>
+<div id="content">
+<% unless flash[:notice] %>
+<% else %>
+<div class="flash notice"><%= flash[:notice] %></div>
+<% end %>
+<div id="main">
+
+<%= yield %>
+</div><!--/main -->
+</div><!-- /content -->
+
+</div><!-- /wrapper -->
+<%= javascript_include_tag 'jquery-1.4.min' %> 
+<%= javascript_include_tag 'rails' %>
+</body>

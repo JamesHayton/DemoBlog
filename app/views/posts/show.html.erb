@@ -1,0 +1,37 @@
+<% @page_title = @post.title %>
+
+<div id="post">
+<h1 class="main-title"><%= @page_title %></h1>
+<p><span class="category-link"><%= link_to @post.category, category_path({:id => @category.slug}) %></span> <span class="category-time"><%= @post.created_at.strftime("%B #{@post.created_at.day.ordinalize}, %Y") %></span></p>
+<div class="post_content">
+<%= (textilize(@post.body)).html_safe %>
+</div>
+<p>
+<% if can? :update, @post %>
+<%= link_to "Edit", edit_post_path({:id => @post.slug}) %>
+<% end %>
+<% if can? :destroy, @post %>
+<%= link_to 'Delete', post_path({:id => @post.slug}), :confirm => "Are you sure?", :method => :delete %>
+<% end %>
+</p>
+
+<div id="temp-post-id-block">
+<p>Post ID: <%= @post.id %></p>
+<p>We have to temporarily output the post id above so that we can easily copy and paste it into the comment form below.  Hopefully sometime soon I can figure out how to get the id of the post automatically so I don't have to do this any longer.</p>
+</div>
+
+</div><!-- /post -->
+
+<div id="comments">
+<h2><% if @comments.count == 1 %><%= @comments.count %> COMMENT<% else %><%= @comments.count %> COMMENTS<% end %></h2>
+
+<% @comments.each do |a| %>
+	<%= render :partial => 'comments/comment', :object => a %>
+<% end %>
+
+<% if @comments.count == 0 %>
+<%= render :partial => 'comments/empty' %>
+<% end %>
+
+<%= render :partial => 'comments/form' %>
+</div><!-- /comments -->	

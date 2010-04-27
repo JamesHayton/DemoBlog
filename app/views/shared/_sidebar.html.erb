@@ -1,0 +1,48 @@
+<div id="sidebar">
+
+<div id="logo">
+<%= link_to "BLOG NAME HERE", root_path %>
+<p>Welcome!  This is a work in progress blog being developed on rails 3, couchdb, devise and cancan.  It's just a test for an app that I am considering building.</p>
+</div>
+
+<div id="navigation">
+<h3 class="title">NAVIGATION</h3>
+<ul>
+<li><%= link_to_with_active_class "Home", root_path %></li>
+<li><%= link_to_with_active_class "Learn About Us", about_path %></li>
+<li><%= link_to_with_active_class "Browse The Archives", archives_path %></li>
+<li><%= link_to_with_active_class "Get In Touch", contact_path %></li>
+</ul>
+</div>
+
+<div id="categories">
+<h3 class="title">CATEGORIES</h3>
+<ul>
+<% @categories.each do |category|%>
+  <li><%= link_to_with_active_class category.name, category_path({:id => category.slug})%></li>
+<% end %>
+</ul>
+</div>
+
+<div id="twitter">
+<h3 class="title">TWITTER</h3>
+<ul>
+<li><a href="http://twitter.com/CouchDB/status/12562261230">@pjimmy I'm in some pretty big deployments, and offline mode is something no other open-source database does.</a></li>
+<li><a href="http://twitter.com/CouchDB/status/12248038732">@lmedinas can I help?</a></li>
+<li><a href="http://twitter.com/CouchDB/status/12235280477">@brianjeremy "If it ain't got a theme song, it ain't NoSQL!" http://j.mp/bqhU1G</a></li>
+<ul>
+</div>
+
+<div id="copyright">
+<p>&copy; Blog Name 2010.  All Rights Reserved.</p>
+</div>
+
+<div id="login">
+<% if user_signed_in? %>
+<%= current_user.username %> | <%= link_to "Logout", destroy_user_session_path, {:rel => "nofollow" } %>
+<% else %>
+<%= link_to "Register", new_user_registration_path, {:rel => "nofollow" } %> | <%= link_to "Login", new_user_session_path, {:rel => "nofollow" } %>
+<% end %>
+</div>
+
+</div><!-- /sidebar -->
