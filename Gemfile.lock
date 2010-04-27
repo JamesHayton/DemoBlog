@@ -1,14 +1,14 @@
 --- 
-hash: f06226c169bdfe1eb2bc70e7979fba5dc8df652b
+hash: 1ec2837506ba040e2549638e945b7d1df6b5ba3b
 sources: 
 - Git: 
     git: git://github.com/ryanb/cancan.git
     uri: git://github.com/ryanb/cancan.git
     ref: 06296b0a40a1ce7e575441d113504b4ae0702fdc
 - Git: 
-    git: git://github.com/plataformatec/devise.git
-    uri: git://github.com/plataformatec/devise.git
-    ref: da971e42497b96b846449ef242069872b6a95010
+    git: git://github.com/JamesHayton/devise.git
+    uri: git://github.com/JamesHayton/devise.git
+    ref: 90b8a780f14a192cc5c054bd43ebdded4f19a3b9
 - Rubygems: 
     uri: http://gemcutter.org
 - Rubygems: 
@@ -27,7 +27,7 @@ specs:
 - i18n: 
     version: 0.3.7
 - memcache-client: 
-    version: 1.8.2
+    version: 1.8.3
 - tzinfo: 
     version: 0.3.20
 - activesupport: 
@@ -75,8 +75,6 @@ specs:
     version: 1.4.2
 - couchrest: 
     version: "0.37"
-- couchrails: 
-    version: "0.1"
 - warden: 
     version: 0.10.3
 - devise: 
@@ -116,10 +114,6 @@ dependencies:
     group: 
     - :default
   devise: 
-    version: ">= 0"
-    group: 
-    - :default
-  couchrails: 
     version: ">= 0"
     group: 
     - :default
