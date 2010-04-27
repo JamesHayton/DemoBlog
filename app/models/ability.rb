@@ -9,6 +9,7 @@ class Ability
     if user && user.username != ""
       can :manage, :all
     else
+      can :create, User
       can :read, Category
       can [:read, :create], Comment
       can :read, Post do |post|
