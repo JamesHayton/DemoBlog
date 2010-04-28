@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   
   helper :all
-  protect_from_forgery
+  #protect_from_forgery
   
   before_filter :set_current
   
