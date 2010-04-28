@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new
-    authorize! :create, @category
+    #authorize! :create, @category
     create_category_params
     
     if @category.save
